@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Hangfire.Core</id>
-    <version>0.0.0</version>
+    <version>1.6.21-RLI</version>
     <title>Hangfire Core Components</title>
     <authors>Sergey Odinokov</authors>
     <owners>odinserj</owners>
@@ -13,6 +13,9 @@
     <copyright>Copyright © 2013-2018 Sergey Odinokov</copyright>
     <tags>Hangfire OWIN Long-Running Background Fire-And-Forget Delayed Recurring Tasks Jobs Scheduler Threading Queues</tags>
     <releaseNotes>https://www.hangfire.io/blog/
+      
+1.6.21-RLI
+* Added - Allow using Reflection types (MethodInfo, Type, and Object[] parameters) to be specified when creating Job
       
 1.6.20
 
@@ -177,25 +180,16 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="net45\Hangfire.Core.dll" target="lib\net45" />
-    <file src="net45\Hangfire.Core.xml" target="lib\net45" />
-    <file src="net45\Hangfire.Core.pdb" target="lib\net45" />
-
-    <file src="net45\**\Hangfire.Core.resources.dll" target="lib\net45" />
-    
-    <file src="netstandard1.3\Hangfire.Core.dll" target="lib\netstandard1.3" />
-    <file src="netstandard1.3\Hangfire.Core.xml" target="lib\netstandard1.3" />
-    <file src="netstandard1.3\Hangfire.Core.pdb" target="lib\netstandard1.3" />
-
-    <file src="netstandard1.3\**\Hangfire.Core.resources.dll" target="lib\netstandard1.3" />
+    <file src="..\src\Hangfire.Core\bin\Debug\**\Hangfire.Core*dll" target="lib" exclude="**\obj*\**\*.dll" />
+    <file src="..\src\Hangfire.Core\bin\Debug\**\Hangfire.Core*xml" target="lib" exclude="**\obj*\**\*.xml" />
     
     <file src="..\src\Hangfire.Core\**\*.cs;..\src\Hangfire.Core\**\*.cshtml" target="src" exclude="**\obj*\**\*.cs" />
 
-    <file src="LICENSE.md" />
-    <file src="NOTICES" />
-    <file src="COPYING" />
-    <file src="COPYING.LESSER" />
-    <file src="LICENSE_STANDARD" />
-    <file src="LICENSE_ROYALTYFREE" />
+    <file src="..\LICENSE.md" />
+    <file src="..\NOTICES" />
+    <file src="..\COPYING" />
+    <file src="..\COPYING.LESSER" />
+    <file src="..\LICENSE_STANDARD" />
+    <file src="..\LICENSE_ROYALTYFREE" />
   </files>
 </package>
